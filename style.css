@@ -1163,6 +1163,7 @@ header.fl-hdr {
     .fl-content-sec-3-img {
         width: 100%;
         float: right;
+        text-align: center;
     } 
     .fl-content-sec-3-dsc {
         width: 100%;
