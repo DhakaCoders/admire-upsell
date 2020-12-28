@@ -643,9 +643,9 @@ header.fl-hdr {
     padding: 10px 30px 18px 25px;
     background: #f7ae00;
     border-radius: 8px;
-    -ms-box-shadow: 5px 5px 0px 0px rgba(21, 116, 155, .50);;
-    -webkit-box-shadow: 5px 5px 0px 0px rgba(21, 116, 155, .50);;
-    box-shadow: 5px 5px 0px 0px rgba(21, 116, 155, .50);;
+    -ms-box-shadow: 5px 5px 0px 0px rgba(21, 116, 155, .70);;
+    -webkit-box-shadow: 5px 5px 0px 0px rgba(21, 116, 155, .70);;
+    box-shadow: 5px 5px 0px 0px rgba(21, 116, 155, .70);;
 }
 .fl-content-sec-4-dsc-full{
     padding-top: 25px;
@@ -738,6 +738,10 @@ header.fl-hdr {
 .fl-content-maoney-back-wrp{
     padding: 45px 30px 20px;
     position: relative;
+}
+.fl-content-maoney-back-wrp > div{
+    position: relative;
+    z-index: 5;
 }
 .fl-content-maoney-back-wrp:before{
     content: "";
