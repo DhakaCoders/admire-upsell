@@ -752,6 +752,7 @@ header.fl-hdr {
     background-size: cover;
     width: 100%;
     height: 100%;
+    background-size: 100% 100%;
 }
 .fl-content-maoney-back-img {
     width: 34%;
@@ -797,6 +798,12 @@ header.fl-hdr {
     font-size: 24px;
     line-height: 1;
     padding-top: 40px;
+}
+.thank-you-line u a{
+    color: inherit;
+}
+.thank-you-line u a:hover{
+    opacity: .7;
 }
 .fl-ftr-top-sec ul li a{
     color: #000000;
@@ -985,7 +992,7 @@ header.fl-hdr {
     margin-bottom: 20px;
 }
 .fl-ftr-nav ul{
-    padding-bottom: 20px;
+    padding-bottom: 40px;
 }
 .fl-ftr-nav ul li,
 .fl-ftr-nav ul li a{
@@ -1003,11 +1010,11 @@ header.fl-hdr {
     padding-right: 0;
 }
 .fl-ftr-nav ul li a{
-    color: inherit;
+    color: #dcdcdc;
 }
 .fl-ftr-nav ul li a:hover,
 .fl-ftr-top-sec ul li a:hover{
-    opacity: .7;
+    opacity: .8;
 }
 .fl-pkg-grd-ftr{
     padding-left: 10px;
@@ -1056,8 +1063,8 @@ header.fl-hdr {
     -webkit-transform: translateY(-50%);
 }
 .fl-ftr-des {
-    color: #99a9af;
-    padding: 0 52px 20px;
+    color: #92a2a8;
+    padding: 0 35px 20px;
     text-align: left;
 }
 .fl-copyright p{
