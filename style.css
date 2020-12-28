@@ -18,24 +18,24 @@
 
 @font-face {
   font-family: 'Barlow-Medium';
-  src: url('assets/fonts/Barlow-Medium/barlow-medium-webfont.woff2') format('woff2'),
-    url('assets/fonts/Barlow-Medium/barlow-medium-webfont.woff') format('woff');
+  src: url('assets/fonts/Barlow-Medium/barlow-medium.woff2') format('woff2'),
+    url('assets/fonts/Barlow-Medium/barlow-medium.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Barlow-Bold';
-  src: url('assets/fonts/Barlow-Bold/barlow-bold-webfont.woff2') format('woff2'),
-    url('assets/fonts/Barlow-Bold/barlow-bold-webfont.woff') format('woff');
+  src: url('assets/fonts/Barlow-Bold/barlow-bold.woff2') format('woff2'),
+    url('assets/fonts/Barlow-Bold/barlow-bold.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 *@font-face {
   font-family: 'Barlow-ExtraBold';
-  src: url('assets/fonts/Barlow-ExtraBold/barlow-extrabold-webfont.woff2') format('woff2'),
-    url('assets/fonts/Barlow-ExtraBold/barlow-extrabold-webfont.woff') format('woff');
+  src: url('assets/fonts/Barlow-ExtraBold/barlow-extrabold.woff2') format('woff2'),
+    url('assets/fonts/Barlow-ExtraBold/barlow-extrabold.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -51,8 +51,8 @@
 }
 @font-face {
   font-family: 'BarlowCondensed-Bold';
-  src: url('assets/fonts/BarlowCondensed-Bold/barlowcondensed-bold-webfont.woff2') format('woff2'),
-    url('assets/fonts/BarlowCondensed-Bold/barlowcondensed-bold-webfont.woff') format('woff');
+  src: url('assets/fonts/BarlowCondensed-Bold/barlowcondensed-bold.woff2') format('woff2'),
+    url('assets/fonts/BarlowCondensed-Bold/barlowcondensed-bold.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -96,6 +96,9 @@ img {
     max-width: 100%;
     height: auto
 }
+strong{
+  font-family: 'LatoBold';   
+}
 .ulc {
     margin: 0;
     padding: 0;
@@ -134,7 +137,9 @@ img {
 }
 p { margin-bottom: 26px }
 a { word-wrap: break-word }
-
+u{
+    text-decoration: underline;
+}
 .plr-30 {
     padding-left: 30px!important;
     padding-right: 30px!important
@@ -255,6 +260,20 @@ header.fl-hdr {
     box-sizing: border-box;
     position: relative
 }
+.fl-shipping-progress-bar{
+    position: relative;
+}
+.fl-shipping-progress-bar:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -16px;
+    height: 16px;
+    background: url(assets/images/bdr-shadow.png);
+    background-repeat: repeat-x;
+    z-index: 5;
+}
 .fl-shipping img {
     display: inline-block;
     position: relative;
@@ -285,24 +304,26 @@ header.fl-hdr {
     font-family: 'BarlowCondensed-Bold';  
     margin-top: 32px;
 }
-.fl-shipping:before {
+.fl-shipping:before{
     content: "";
-    height: 14px;
+    height: 15px;
     width: 100%;
     position: absolute;
-    background: #06b3fb;
+    background: url(assets/images/fl-shipping-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 15px;
     left: 0;
     right: 0;
     border-radius: 50px;
     top: 57px;
-} 
+}
 .fl-special-offer-sec{
     background-repeat: no-repeat;
-    background-position: center 97%;
+    background-position: bottom right!important;
+    background-repeat: no-repeat!important;
+    background-size: cover!important;
     margin-top: 5px;
-    -ms-box-shadow: -1px -1px 10px 2px rgba(0, 0, 0, .16);
-    -webkit-box-shadow: -1px -1px 10px 2px rgba(0, 0, 0, .16);
-    box-shadow: -1px -1px 10px 2px rgba(0, 0, 0, .16); 
 }
 .special-offer-con-wrp {
     position: relative;
@@ -331,8 +352,7 @@ header.fl-hdr {
     line-height: 22px;
     color: #000;
     padding: 18px 30px;
-    background-position: center center;
-    background-repeat: no-repeat;
+    background-size: 100% 100%!important;
 }
 .special-offer-dsc h4{
     display: inline-block;
@@ -343,7 +363,7 @@ header.fl-hdr {
     color: #000;
     margin: 15px 0 25px;
 }
-.special-offer-dsc a{
+.special-offer-dsc mark{
     display: inline-block;
     vertical-align: baseline;
     text-decoration: none;
@@ -414,15 +434,27 @@ header.fl-hdr {
     padding: 25px 35px 1px 25px;
     color: #fff;
     margin-bottom: 20px;
+    background-position: bottom right!important;
+    background-repeat: no-repeat!important;
+    background-size: cover!important; 
 }
 .fl-content-sec-1-btm-1-img{
     margin-left: -30px;
     margin-right: -20px;
 }
 .fl-content-sec-2-wrp{
-   -ms-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .16);
-    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .16);
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .16);  
+   position: relative;
+}
+.fl-content-sec-2-wrp:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -9px;
+    height: 9px;
+    background: url(assets/images/bdr-shadow-2.png);
+    background-repeat: repeat-x;
+    z-index: 5;
 }
 .fl-content-sec-2-dsc-fullwidth{
     padding-right: 10px;
@@ -430,7 +462,7 @@ header.fl-hdr {
 
 .fl-content-sec-2-head {
     background: #1096ce;
-    padding: 15px 30px 15px;
+    padding: 12px 30px 15px;
     color: #fff;
     text-align: center;
     border-bottom: 4px solid#c6cdd4;
@@ -440,7 +472,7 @@ header.fl-hdr {
     margin-bottom: 0;
     font-family: 'BarlowCondensed-SemiBold';
 }
-.fl-content-sec-1-btm-1-dsc p a{
+.fl-content-sec-1-btm-1-dsc p u{
     color: inherit;
     text-decoration: underline;
 }
@@ -458,7 +490,7 @@ header.fl-hdr {
     background: #f2fbff;
     margin-left: -25px;
     margin-right: -25px;
-    padding: 35px 25px 0;
+    padding: 35px 25px 15px;
 }
 .fl-content-sec-2-profile-wrp ul li{
     padding-bottom: 15px;
@@ -573,14 +605,23 @@ header.fl-hdr {
 }
 
 .fl-content-sec-4-head {
+    background-color: #1c9bcf;
     margin-left: -25px;
     margin-right: -25px;
     text-align: center;
     padding: 25px 25px 25px;
     position: relative;
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    background-size: cover;
+}
+.fl-content-sec-4-head:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -11px;
+    height: 11px;
+    background: url(assets/images/btm-wave.png);
+    background-repeat: repeat-x;
+    z-index: 5;
 }
 .fl-content-sec-4-head h1 {
     font-family: 'BarlowCondensed-SemiBold';
@@ -590,7 +631,7 @@ header.fl-hdr {
     margin-top: 5px;
     margin-bottom: 5px;
 }
-.fl-content-sec-4-head a{
+.fl-content-sec-4-head span{
     display: inline-block;
     vertical-align: baseline;
     text-decoration: none;
@@ -608,8 +649,8 @@ header.fl-hdr {
 .fl-content-sec-4-dsc-full{
     padding-top: 25px;
 }
-.fl-content-sec-4-btm-dsc-full p a,
-.fl-content-sec-4-dsc-full p a{
+.fl-content-sec-4-btm-dsc-full p u,
+.fl-content-sec-4-dsc-full p u{
     text-decoration: underline;
     color: inherit;
 }
@@ -617,13 +658,15 @@ header.fl-hdr {
     padding-top: 10px;
 }
 .fl-content-sec-4-contlr{
-     -ms-box-shadow: 1px 0px 5px 1px rgba(0, 0, 0, .16);
-    -webkit-box-shadow: 1px 0px 5px 1px rgba(0, 0, 0, .16);
-    box-shadow: 1px 0px 5px 1px rgba(0, 0, 0, .16);
+    -webkit-box-shadow: 0px 3px 16px 0px rgba(213,217,220,1);
+    -moz-box-shadow: 0px 3px 16px 0px rgba(213,217,220,1);
+    box-shadow: 0px 3px 16px 0px rgba(213,217,220,1);
     border-radius: 8px;
 }
 .fl-content-sec-4-dsc-1-wrp {
     padding: 15px 20px 30px 25px;
+    background-color: #fff;
+    border-radius: 10px;
 }
 .fl-content-sec-4-img-1{
     width: 50%;
@@ -652,8 +695,10 @@ header.fl-hdr {
     margin-bottom: 0;
 }
 .fl-content-sec-5-wrp{
-    padding-top: 40px;
+    padding-top: 165px;
     padding-bottom: 15px;
+    background: #f2fbff;
+    margin-top: -135px;
 }
 .fl-content-sec-5-head{
     background: #1096ce;
@@ -741,7 +786,7 @@ header.fl-hdr {
     margin-top: -15px;
     margin-left: -70px;
 }
-.thank-you-line a{
+.thank-you-line u{
     display: block;
     text-decoration: underline;
     color: #0055e3;
@@ -838,6 +883,7 @@ header.fl-hdr {
 }
 .order1 .fl-pkg-grd-col-hdr span{
     text-shadow: 0px 3px #b82121;
+    background-position: center bottom!important;
 }
 .fl-pkg-grd-col-fea-img {
     margin: 0 auto;
@@ -856,7 +902,7 @@ header.fl-hdr {
 }
 .order1 .fl-pkg-grd-col-fea-img span {
     top: 22px;
-    right: 90px;
+    right: 86px;
 }
 .fl-pkg-grd-col{
     background: #f7f7f7;
@@ -874,9 +920,9 @@ header.fl-hdr {
 .fl-pkg-price:before {
     content: "$";
     position: absolute;
-    left: 3px;
-    top: -7px;
-    font-size: 42px;
+    left: 2px;
+    top: -29px;
+    font-size: 50px;
     line-height: 100%;
     font-family: 'Barlow-Bold';
     margin-right: 2px;
@@ -897,7 +943,7 @@ header.fl-hdr {
     -webkit-transform: translateY(-50%);
 }
 .fl-pkg-price strong {
-    font-size: 68px;
+    font-size: 98px;
     line-height: 58px;
     font-weight: normal;
     font-family: 'Barlow-Bold';
@@ -905,20 +951,19 @@ header.fl-hdr {
 }
 .fl-pkg-price sup {
     position: absolute;
-    right: 16px;
-    font-size: 43px;
+    right: 9px;
+    font-size: 50px;
     font-family: 'Barlow-Bold';
-    top: -3px;
+    top: -7px;
     line-height: 100%;
 }
 .fl-pkg-price sub {
     position: absolute;
-    right: 15px;
+    right: 11px;
     font-size: 39px;
-    bottom: 9px;
+    bottom: 8px;
     font-family: 'BarlowCondensed-Regular';
 }
-
 .fl-pkg-grd-ftr ul{
     display: table;
     margin: 0 auto;
@@ -1051,7 +1096,7 @@ header.fl-hdr {
         padding-left: 20px;
         padding: 20px 160px 20px 20px;
     }
-    .fl-content-sec-4-head a{
+    .fl-content-sec-4-head span{
         font-size: 50px;
         line-height: 38px;
     }
@@ -1065,7 +1110,7 @@ header.fl-hdr {
     .special-offer-dsc h4{
         font-size: 32px;
     }
-    .special-offer-dsc a{
+    .special-offer-dsc mark{
         font-size: 40px;
     }
     .special-offer-con-wrp {
@@ -1169,10 +1214,7 @@ header.fl-hdr {
         width: 100%;
         float: left;
     }
-    .fl-content-sec-3-head {
-        padding-bottom: 10px;
-    }
-    .fl-content-sec-4-head a{
+    .fl-content-sec-4-head span{
         font-size: 42px;
         line-height: 35px;
     }
@@ -1221,13 +1263,22 @@ header.fl-hdr {
     .special-offer-dsc h4{
         font-size: 30px;
     }
-    .special-offer-dsc a{
+    .special-offer-dsc mark{
         font-size: 38px;
     }
     .special-offer-con-wrp {
         padding: 35px 20px 30px;
     }
-
+    .fl-content-maoney-back-wrp:before{
+        display: none;
+    }
+    .fl-content-maoney-back-wrp {
+        border: 1px solid#146f94;
+        padding: 10px 15px 10px;
+    }
+    .fl-content-sec-2-profile-wrp{
+        padding-bottom: 35px;
+    }
 }
 
 @media (max-width:830px){
@@ -1245,22 +1296,22 @@ header.fl-hdr {
         display: block!important;
     }
     body {
-        font-size: 18px;
+        font-size: 19px;
     }
     p{
        margin-bottom: 20px;
     }
-     h1 {
-      font-size: 38px;
+    h1 {
+      font-size: 40px;
     }
     h2 {
-      font-size: 34px;
+      font-size: 35px;
     }
     h3 {
       font-size: 30px;
     }
     h4 {
-      font-size: 23px;
+      font-size: 24px;
     }
     .fl-content-sec-2-profile-img {
         width: 200px;
@@ -1296,12 +1347,9 @@ header.fl-hdr {
         font-size: 20px;
         line-height: 24px;
     }
-    .fl-content-sec-4-head a{
+    .fl-content-sec-4-head span{
         font-size: 38px;
         line-height: 32px;
-    }
-    .fl-content-sec-5-wrp {
-        padding-top: 25px;
     }
     .fl-content-sec-5-dsc-btm-full {
         padding-bottom: 0px;
@@ -1325,7 +1373,7 @@ header.fl-hdr {
     .special-offer-dsc h4{
         font-size: 28px;
     }
-    .special-offer-dsc a{
+    .special-offer-dsc mark{
         font-size: 35px;
     }
     .special-offer-dsc h5{
@@ -1343,22 +1391,19 @@ header.fl-hdr {
     .fl-content-maoney-back-img{
         padding-top: 20px;
     }
-    .fl-content-maoney-back-wrp:before{
-        display: none;
-    }
+
     .fl-content-sec-6-wrp {
         padding-top: 30px;
         padding-bottom: 50px;
         
     }
-    .fl-content-maoney-back-wrp {
-        border: 1px solid#146f94;
-        padding: 10px 15px 10px;
-    }
-    .special-offer-dsc a{
+    
+    .special-offer-dsc mark{
         padding: 15px 20px 10px;
     }
-    
+    .title-wave{
+        max-width: 300px;
+    }
     
 
 }
@@ -1385,16 +1430,16 @@ header.fl-hdr {
  
 @media(max-width: 575px){
     h1 {
-      font-size: 35px;
+      font-size: 38px;
     }
     h2 {
-      font-size: 32px;
+      font-size: 35px;
     }
     h3 {
-      font-size: 28px;
+      font-size: 30px;
     }
     h4 {
-      font-size: 21px;
+      font-size: 22px;
     }
     .header-innr{
         display: block;
@@ -1410,8 +1455,8 @@ header.fl-hdr {
         padding-bottom: 20px;
     }
     .au-content-2-profile-wrp {
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 0;
+        padding-right: 0;
         padding-bottom: 15px;
     }
     .au-content-2-profile-img {
@@ -1424,18 +1469,28 @@ header.fl-hdr {
     .au-content-2-profile-inr {
         padding: 20px 20px 60px 20px;
     }
-    .fl-content-sec-4-head a{
+    .fl-content-sec-4-head span{
         font-size: 33px;
         line-height: 28px;
     }
-    .special-offer-dsc a{
+    .special-offer-dsc mark{
         font-size: 32px;
     }
     .special-offer-dsc h5{
         font-size: 26px;
     }
-    
-    
+    .thank-you-line u{
+        font-size: 22px;
+    }
+    .fl-pkg-price strong {
+        font-size: 95px;
+    }
+    .order1 .fl-pkg-grd-col-fea-img span{
+        max-width: 80px;
+      }
+      .order1 .fl-pkg-grd-col-fea-img span{
+        right: 75px;
+      }
 
 }
 
@@ -1445,14 +1500,6 @@ header.fl-hdr {
         font-size: 15px;
         line-height: 17px;
     }
-    .order1 .fl-pkg-grd-col-fea-img span {
-        top: 22px;
-        right: auto;
-        transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        -webkit-transform: translateX(-50%);
-        left: 50%;
-    }
     .special-offer-dsc span {
         font-size: 16px;
         line-height: 18px;
@@ -1460,6 +1507,25 @@ header.fl-hdr {
     }
     .special-offer-dsc h4 {
         font-size: 26px;
+    }
+    .order1 .fl-pkg-price strong {
+        font-size: 75px;
+    }
+    .fl-pkg-price:before {
+        left: 2px;
+        top: -13px;
+        font-size: 45px;
+    }
+    .fl-pkg-price sup {
+        right: 13px;
+        font-size: 46px;
+        top: -7px;
+    }
+    .fl-pkg-price sub {
+        position: absolute;
+        right: 18px;
+        font-size: 35px;
+        bottom: 11px;
     }
 
 }
