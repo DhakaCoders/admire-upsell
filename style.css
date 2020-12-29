@@ -1135,7 +1135,19 @@ header.fl-hdr {
 } 
 
 @media(max-width: 1023px){
-    
+    .bnr-overlay{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba(255,255,255, .5);
+        z-index: 1;
+    }
+    .special-offer-con-wrp{
+        position: relative;
+        z-index: 2;
+    }   
 }
 
 @media(max-width: 991px){
@@ -1291,19 +1303,7 @@ header.fl-hdr {
     .fl-content-sec-2-profile-wrp{
         padding-bottom: 35px;
     }
-    .bnr-overlay{
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        background: rgba(255,255,255, .5);
-        z-index: 1;
-    }
-    .special-offer-con-wrp{
-        position: relative;
-        z-index: 2;
-    }
+    
     .fl-content-maoney-back-dsc h5{
         text-align: center;
     }
